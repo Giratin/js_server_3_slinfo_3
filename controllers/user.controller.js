@@ -21,6 +21,8 @@ module.exports = {
         }
     },
     findAllUsers: (req, res) => {
+        console.log("==============");
+        console.log(req.user);
         User.find()
             .then((docs) => {
                 res.status(200).json(docs);
